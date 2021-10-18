@@ -1,14 +1,16 @@
-
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        header
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+        <div>
+            <div>onde div</div>
+           <ul>
+               <li>css</li>
+               <li>react</li>
+               <li>js</li>
+           </ul>
+        </div>
+    )
 }
 
 export default App;
