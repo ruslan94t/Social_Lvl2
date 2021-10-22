@@ -16,7 +16,9 @@ function MyPosts(props) {
                     <button>Add Post</button>
                 </div>
                 <div className={s.posts}>
-                  <Post />
+                  <Post message='Hi how  are you' />
+                  <Post message={`Hi ' how  are you`} />
+
                 </div>
             </div>
 
