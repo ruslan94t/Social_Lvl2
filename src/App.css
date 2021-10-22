@@ -18,29 +18,9 @@ display: grid;
 }
 
 
-.header{
-    grid-area: h;
-    background-color: green;
-}
 
 
-.header img{
-    width: 50px;
-}
-.nav{
-    grid-area: n;
-    background-color: burlywood;
-}
 
-.content{
-    grid-area: c;
-    background-color: cornflowerblue;
-}
-
-.content img{
-
-    width: 70%;
-}
 
 
 
