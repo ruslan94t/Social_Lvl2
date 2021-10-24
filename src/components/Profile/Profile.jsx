@@ -5,7 +5,7 @@ function Profile(props) {
     return (
         <div>
             <div>
-                <img src='https://pinster.ru/cache/4e6bd3a7/avd56a9538548e2dbcd98.jpeg' />
+                <img  className={s.imageProfile} src='https://content.skyscnr.com/m/1b51182679225810/original/GettyImages-147444574_doc.jpg?resize=1800px:1800px&quality=100' />
             </div>
             <div>ava+description</div>
      <MyPosts />
