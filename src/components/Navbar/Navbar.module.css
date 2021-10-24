@@ -1,16 +1,25 @@
 .nav{
     grid-area: n;
     background-color: burlywood;
+    padding: 20px;
 }
-
-.item {
+.item{
+    padding: 5px;
+}
+.item a{
     color: white;
+font-size: 18px;
+    font-family: sans-serif;
     text-decoration: none;
+    transition: color .2ms ease-in;
+
 
 }
 
-
-.active{
+.item a:hover{
+    color: rgba(236, 234, 219, 0.87);
+}
+.item a.active{
     color: gold;
     text-decoration: none;
 }
