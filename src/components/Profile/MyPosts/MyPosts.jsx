@@ -8,12 +8,19 @@ import Post from "./Post/Post";
 function MyPosts(props) {
     return (
 
-            <div>
-                My Post
+            <div className={s.postsBlock}>
+
+                <h3>My Post</h3>
 
                 <div>
-                    <textarea></textarea>
+                    <div>
+
+                        <textarea></textarea>
+                    </div>
+                    <div>
                     <button>Add Post</button>
+
+                    </div>
                 </div>
                 <div className={s.posts}>
                   <Post message='Hi how  are you' />
