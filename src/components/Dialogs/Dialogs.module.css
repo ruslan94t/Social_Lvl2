@@ -9,11 +9,20 @@ display:grid ;
 }
 
 .dialogsItems{
+    color: white;
 padding: 10px;
 }
 
-.dialog{
+.dialog {
+
 padding: 5px;
+}
+
+.dialog a{
+    font-size: 18px;
+    font-family: inherit;
+    color: white;
+    text-decoration: none;
 }
 .dialogsItems .active{
     color: gold;
@@ -23,5 +32,5 @@ padding: 10px;
 }
 
 .message{
-
+color: white;
 }
