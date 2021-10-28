@@ -8,7 +8,12 @@ import s from "./components/Dialogs/Dialogs.module.css";
 import {BrowserRouter, Route} from "react-router-dom";
 
 
-const App = () => {
+const App = (props) => {
+
+
+
+
+
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
@@ -19,8 +24,16 @@ const App = () => {
                     {/*<Route  path="/dialogs" component={Dialogs} />*/}
                     {/*<Route path="/profile" component={Profile} />*/}
 
-                    <Route path="/dialogs" render={() => <Dialogs/>}/>
-                    <Route path="/profile" render={() => <Profile/>}/>
+                    <Route path="/dialogs"
+                           render={() => <Dialogs
+                           messages={props.messages}
+                           dialogs={props.dialogs}
+                           />}/>
+
+                    <Route path="/profile"
+                           render={() => <Profile
+                           posts={props.posts}
+                           />}/>
 
                 </div>
 

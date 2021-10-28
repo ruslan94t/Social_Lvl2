@@ -8,12 +8,9 @@ import Post from "./Post/Post";
 function MyPosts(props) {
 
 
-    let posts = [
-        {id:1, message:"Hi, how are you ?", likesCount:12 },
-        {id:2, message:"Its my first post", likesCount: 3}
-    ]
 
-   let postElements = posts
+
+   let postElements = props.posts
        .map(p=><Post key={p.id} message={p.message} likesCount={p.likesCount} /> )
     return (
 
