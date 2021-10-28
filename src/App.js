@@ -26,13 +26,13 @@ const App = (props) => {
 
                     <Route path="/dialogs"
                            render={() => <Dialogs
-                           messages={props.messages}
-                           dialogs={props.dialogs}
+                           state={props.state.dialogsPage}
+
                            />}/>
 
                     <Route path="/profile"
                            render={() => <Profile
-                           posts={props.posts}
+                           state={props.state.profilePage}
                            />}/>
 
                 </div>
