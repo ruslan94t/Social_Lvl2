@@ -16,6 +16,21 @@ const Message =(props)=>{
     return <div className={s.message}>{props.message}</div>
 }
 
+let dialogsData = [
+    {id:1, name:"Alina"},
+    {id:2, name:"Masha"},
+    {id:3, name:"Sasha"},
+    {id:4, name:"Nastya"},
+    {id:5, name:"Juliya"},
+    {id:6, name:"Anya"},
+];
+let messageData = [
+    {id:1, message:"Hi"},
+    {id:2, message:"Yo Yo Yo"},
+    {id:3, message:"How is you"},
+    {id:4, message:"Whery you"},
+
+];
 
 
 

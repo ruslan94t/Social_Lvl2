@@ -6,6 +6,12 @@ import Post from "./Post/Post";
 
 
 function MyPosts(props) {
+
+
+    let postData = [
+        {id:1, message:"Hi, how are you ?", likesCount:12 },
+        {id:2, message:"Its my first post", likesCount: 3}
+    ]
     return (
 
             <div className={s.postsBlock}>
@@ -23,8 +29,16 @@ function MyPosts(props) {
                     </div>
                 </div>
                 <div className={s.posts}>
-                  <Post message='Hi how  are you' />
-                  <Post message={`Hi ' how  are you`} />
+                    <Post
+                        message={postData[0].message}
+                        likesCount={postData[0].likesCount}
+                    />
+                    <Post
+                        message={postData[1].message}
+                        likesCount={postData[1].likesCount}
+                    />
+
+
 
                 </div>
             </div>
