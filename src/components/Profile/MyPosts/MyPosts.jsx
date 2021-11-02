@@ -3,60 +3,58 @@ import s from './MyPosts.module.css';
 import Post from "./Post/Post";
 
 
-
-
 function MyPosts(props) {
 
 
+    let postElements = props.posts
+        .map(p => <Post key={p.id} message={p.message} likesCount={p.likesCount}/>)
+
+    let newPostElement = React.createRef()
 
 
-   let postElements = props.posts
-       .map(p=><Post key={p.id} message={p.message} likesCount={p.likesCount} /> )
+    let addPost = () => {
+        let text = newPostElement.current.value;
+        props.dispatch({type:"ADD-POST"})
 
-let newPostElement = React.createRef()
-
-
-    let addPost = ()=>{
-       let text = newPostElement.current.value;
-       props.addPost()
-
-       props.updateNewPostText('')
+       // props.updateNewPostText('')
 
     }
 
 
-    let onPostChange =()=>{
+    let onPostChange = () => {
         let text = newPostElement.current.value;
-        props.updateNewPostText(text)
+        //props.updateNewPostText(text)
+        let action = {type:"UPDATE-NEW-POST_TEXT", newText:text};
+        props.dispatch(action)
     };
 
 
     return (
 
-            <div className={s.postsBlock}>
+        <div className={s.postsBlock}>
 
-                <h3>My Post</h3>
+            <h3>My Post</h3>
 
+            <div>
                 <div>
-                    <div>
 
                         <textarea
                             onChange={onPostChange}
                             ref={newPostElement}
-                        value={props.newPostText}
+                            value={props.newPostText}
                         ></textarea>
-                    </div>
-                    <div>
-                    <button onClick={addPost}>Add Post</button>
-
-                    </div>
                 </div>
-                <div className={s.posts}>
-
-                    {postElements}
+                <div>
+                    <button onClick={addPost}>Add Post</button>
 
                 </div>
             </div>
+            <div className={s.posts}>
+
+                {postElements}
+
+            </div>
+        </div>
 
     );
 }
