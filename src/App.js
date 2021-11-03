@@ -11,36 +11,33 @@ import {Route} from "react-router-dom";
 const App = (props) => {
 
 
-
-
-
     return (
 
-            <div className='app-wrapper'>
-                <Header/>
-                <Navbar/>
-                <div className='app-wrapper-content'>
+        <div className='app-wrapper'>
+            <Header/>
+            <Navbar/>
+            <div className='app-wrapper-content'>
 
-                    {/*<Route  path="/dialogs" component={Dialogs} />*/}
-                    {/*<Route path="/profile" component={Profile} />*/}
+                {/*<Route  path="/dialogs" component={Dialogs} />*/}
+                {/*<Route path="/profile" component={Profile} />*/}
 
-                    <Route path="/dialogs"
-                           render={() => <Dialogs
+                <Route path="/dialogs"
+                       render={() => <Dialogs
                            state={props.state.dialogsPage}
+                           store={props.store}
+                       />}/>
 
-                           />}/>
-
-                    <Route path="/profile"
-                           render={() => <Profile
+                <Route path="/profile"
+                       render={() => <Profile
                            profilePage={props.state.profilePage}
                            dispatch={props.dispatch}
 
-                           />}/>
-
-                </div>
-
+                       />}/>
 
             </div>
+
+
+        </div>
 
 
     )
