@@ -17,20 +17,17 @@ function MyPosts(props) {
     let newPostElement = React.createRef()
 
 
-    let addPost = () => {
-        let text = newPostElement.current.value;
-        props.dispatch(addPostActionCreator())
-
-       // props.updateNewPostText('')
+    let onAddPost = () => {
+        props.addPost()
 
     }
 
 
     let onPostChange = () => {
         let text = newPostElement.current.value;
-        //props.updateNewPostText(text)
-        let action = updateNewPostTextActionCreator(text)
-        props.dispatch(action)
+         props.updateNewPostText(text)
+       // let action = updateNewPostTextActionCreator(text)
+       // props.dispatch(action)
     };
 
 
@@ -50,7 +47,7 @@ function MyPosts(props) {
                         ></textarea>
                 </div>
                 <div>
-                    <button onClick={addPost}>Add Post</button>
+                    <button onClick={onAddPost}>Add Post</button>
 
                 </div>
             </div>
