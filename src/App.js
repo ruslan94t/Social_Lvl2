@@ -24,14 +24,12 @@ const App = (props) => {
 
                 <Route path="/dialogs"
                        render={() => <DialogsContainer
-                           store={props.store}
+
                        />}/>
 
                 <Route path="/profile"
                        render={() => <Profile
-                           store={props.store}
-                           profilePage={props.state.profilePage}
-                           dispatch={props.dispatch}
+                        
 
                        />}/>
 
