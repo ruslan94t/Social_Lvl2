@@ -16,7 +16,6 @@ function Dialogs(props) {
 
     let state=props.dialogsPage;
 
-
     let dialogsElements = state.dialogs
         .map(d =>  <DialogItem key={d.id} name={d.name} id={d.id} />);
 
