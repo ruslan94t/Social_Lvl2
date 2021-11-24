@@ -12,7 +12,7 @@ function Navbar(props) {
                 <NavLink to="/dialogs" activeClassName={s.active} >Messages</NavLink>
             </div>
             <div className={`${s.item} ${s.active}`}>
-                <a >News</a>
+                <NavLink activeClassName={s.active} to="/users">Users</NavLink>
             </div>
             <div className={s.item}>
                 <a >Music</a>
