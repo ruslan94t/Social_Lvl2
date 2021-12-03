@@ -4,23 +4,22 @@ import * as axios from "axios";
 import userPhoto from '../../assets/image/user.png'
 
 
-class Users extends React.Component{
+class Users extends React.Component {
 
 
-    constructor(props){
-        super(props)
+
+
+    componentDidMount() {
+
         axios.get('https://social-network.samuraijs.com/api/1.0/users').then(response => {
 
             this.props.setUsers(response.data.items)
         })
     }
 
-   getUsers=()=>{
-
-    }
     render() {
 
-        return(
+        return (
             <div>
 
                 {this.props.users.map(u => <div key={u.id}>
@@ -28,7 +27,7 @@ class Users extends React.Component{
                     <div>
                         <img
                             className={s.userPhoto}
-                            src={u.photos.small !== null ? u.photos.small:userPhoto}
+                            src={u.photos.small !== null ? u.photos.small : userPhoto}
                         />
                     </div>
                     <div>
