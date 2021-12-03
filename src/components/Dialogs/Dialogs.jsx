@@ -6,13 +6,7 @@ import {sendMessageCreator, updateNewMessageBodyCreator} from "../../redux/dialo
 
 
 
-
-
-
-
-
 function Dialogs(props) {
-
 
     let state=props.dialogsPage;
 
